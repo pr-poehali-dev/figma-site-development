@@ -122,157 +122,6 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Секция о нас */}
-      <div className="py-16 bg-pink-50">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="text-3xl font-serif font-bold mb-4 text-gray-800">О нашем центре</h2>
-              <p className="text-gray-600 mb-4">
-                Центр Woman Sens был основан в 2010 году с целью создания уникального пространства, 
-                где женщины могут получить комплексную заботу о своем здоровье и благополучии.
-              </p>
-              <p className="text-gray-600 mb-4">
-                Наша команда состоит из опытных специалистов различных направлений, 
-                которые объединены общей миссией - помогать женщинам сохранять здоровье, 
-                красоту и внутреннюю гармонию на всех этапах жизни.
-              </p>
-              <p className="text-gray-600 mb-6">
-                Мы стремимся создать атмосферу доверия, где каждая клиентка чувствует себя услышанной и понятой.
-              </p>
-              <Button className="bg-pink-500 hover:bg-pink-600 text-white rounded-full">
-                Узнать больше о нас
-              </Button>
-            </div>
-            <div className="order-1 md:order-2 flex justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1580&q=80" 
-                alt="Наша команда"
-                className="rounded-lg shadow-lg max-w-full h-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Секция отзывов */}
-      <div className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-serif font-bold mb-4 text-gray-800">Отзывы наших клиенток</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Доверие наших клиенток - наша главная ценность. Мы благодарны за каждый отзыв и стремимся стать еще лучше
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Елена, 34 года",
-                image: "https://images.unsplash.com/photo-1535468850893-d6e543fbd7f5?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFwcHklMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D",
-                text: "Благодаря центру Woman Sens я смогла решить проблемы со здоровьем, которые беспокоили меня годами. Профессиональный подход и внимание к деталям - то, что отличает этот центр от других."
-              },
-              {
-                name: "Марина, 42 года",
-                image: "https://images.unsplash.com/photo-1590650046871-92c887180603?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG1pZGRsZSUyMGFnZWQlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D",
-                text: "Посещаю центр уже больше года и всегда получаю высококлассное обслуживание. Особенно хочу отметить программы по поддержанию здоровья во время менопаузы - они действительно работают!"
-              },
-              {
-                name: "Анастасия, 28 лет",
-                image: "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8eW91bmclMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D",
-                text: "Консультации психолога в Woman Sens помогли мне пережить сложный период в жизни. Благодарна за профессионализм и чуткое отношение. Теперь рекомендую центр всем своим подругам."
-              }
-            ].map((review, index) => (
-              <div key={index} className="bg-pink-50 p-6 rounded-lg">
-                <div className="flex items-center mb-4">
-                  <img 
-                    src={review.image} 
-                    alt={review.name} 
-                    className="w-12 h-12 rounded-full object-cover mr-4"
-                  />
-                  <h4 className="font-serif font-semibold text-gray-800">{review.name}</h4>
-                </div>
-                <p className="text-gray-600 italic">"{review.text}"</p>
-                <div className="mt-4 flex text-pink-500">
-                  {[...Array(5)].map((_, i) => (
-                    <Icon key={i} name="Star" size={16} className="mr-1" />
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Форма контакта */}
-      <div className="py-16 bg-pink-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl font-serif font-bold mb-4 text-gray-800">Запишитесь на консультацию</h2>
-              <p className="text-gray-600">
-                Оставьте свои контактные данные, и мы свяжемся с вами для подтверждения даты и времени консультации
-              </p>
-            </div>
-            
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">Ваше имя</label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-pink-500 focus:border-pink-500"
-                    placeholder="Введите ваше имя"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Номер телефона</label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-pink-500 focus:border-pink-500"
-                    placeholder="+7 (___) ___-__-__"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">Интересующая услуга</label>
-                <select
-                  id="service"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-pink-500 focus:border-pink-500"
-                >
-                  <option value="">Выберите услугу</option>
-                  <option value="gynecology">Гинекология</option>
-                  <option value="cosmetology">Косметология</option>
-                  <option value="psychology">Психологическая поддержка</option>
-                  <option value="alternative">Альтернативная медицина</option>
-                  <option value="fitness">Фитнес программы</option>
-                  <option value="planning">Планирование семьи</option>
-                </select>
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">Сообщение (необязательно)</label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-pink-500 focus:border-pink-500"
-                  placeholder="Если у вас есть дополнительные вопросы или пожелания"
-                ></textarea>
-              </div>
-              
-              <div className="flex justify-center">
-                <Button className="bg-pink-500 hover:bg-pink-600 text-white rounded-full px-12 py-3 text-lg">
-                  Отправить заявку
-                </Button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
@@ -293,7 +142,7 @@ const Index = () => {
                   <Icon name="Twitter" size={18} />
                 </a>
                 <a href="#" className="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition-colors">
-                  <Icon name="Telegram" size={18} />
+                  <Icon name="Youtube" size={18} />
                 </a>
               </div>
             </div>
@@ -311,10 +160,6 @@ const Index = () => {
                 <p className="flex items-center text-gray-400">
                   <Icon name="Mail" size={18} className="mr-2 text-pink-500" />
                   info@woman-sens.ru
-                </p>
-                <p className="flex items-center text-gray-400">
-                  <Icon name="Clock" size={18} className="mr-2 text-pink-500" />
-                  Пн-Пт: 9:00-20:00, Сб: 10:00-18:00
                 </p>
               </div>
             </div>

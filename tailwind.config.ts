@@ -9,6 +9,7 @@ export default {
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
   ],
+  prefix: "",
   theme: {
     container: {
       center: true,
@@ -69,18 +70,17 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         pink: {
-          '50': '#fdf2f7',
-          '100': '#fce7f2',
-          '200': '#fbcfe8',
-          '300': '#f9a8d4',
-          '400': '#f472b6',
-          '500': '#ec4899',
-          '600': '#db2777',
-          '700': '#be185d',
-          '800': '#9d174d',
-          '900': '#831843',
-          '950': '#500724',
-        },
+          50: "#FFF0F7",
+          100: "#FFE1EF",
+          200: "#FFC4DF",
+          300: "#FFA6CF",
+          400: "#FF89BF",
+          500: "#FF6BAF",
+          600: "#E6609E",
+          700: "#CC558D",
+          800: "#B34A7C",
+          900: "#993F6B",
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
