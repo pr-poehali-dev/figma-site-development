@@ -1,4 +1,3 @@
-
 import { type Config } from "tailwindcss";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
@@ -19,6 +18,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Inter", ...fontFamily.sans],
+        serif: ["Playfair Display", ...fontFamily.serif],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -66,27 +69,23 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         pink: {
-          50: "#fdf2f8", 
-          100: "#fce7f3",
-          200: "#fbcfe8",
-          300: "#f9a8d4",
-          400: "#f472b6",
-          500: "#ec4899",
-          600: "#db2777",
-          700: "#be185d",
-          800: "#9d174d",
-          900: "#831843",
-          950: "#500724",
+          '50': '#fdf2f7',
+          '100': '#fce7f2',
+          '200': '#fbcfe8',
+          '300': '#f9a8d4',
+          '400': '#f472b6',
+          '500': '#ec4899',
+          '600': '#db2777',
+          '700': '#be185d',
+          '800': '#9d174d',
+          '900': '#831843',
+          '950': '#500724',
         },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        sans: ["Inter var", ...fontFamily.sans],
-        serif: ["Playfair Display", ...fontFamily.serif],
       },
       keyframes: {
         "accordion-down": {
@@ -104,5 +103,8 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+  ],
 } satisfies Config;
